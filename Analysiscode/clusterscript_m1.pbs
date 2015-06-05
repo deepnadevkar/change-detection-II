@@ -1,0 +1,29 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=1
+#PBS -l mem=8GB
+#PBS -l walltime=2:00:00
+#PBS -M dd107@nyu.edu
+#PBS -m abe
+#PBS -j oe
+#PBS -t 1-100
+
+module load matlab/2014a
+
+cd /scratch/dd107
+
+par=${PBS_ARRAYID}
+
+export jobID=$par
+
+cat<<EOF | matlab -nojvm -nodisplay -nosplash > output-$jobID.log 2>&1
+jobID = getenv('jobID')
+jobID = str2num(jobID)
+
+modelfitting_lapse_m1_forcluster(jobID);
+
+EOF
+
+exit;
+
+echo "Done"
+
