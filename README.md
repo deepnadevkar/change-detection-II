@@ -1,4 +1,6 @@
-# change-detection-II: matlab and visual basic code for a working memory task, which aims at understanding how subjects make perceptual decisions when faced with sensory uncertainty . 
+# change-detection-II: matlab and visual basic code for modeling decision-making during uncertainty
+
+This project aims to understand how subjects make perceptual decisions when faced with sensory uncertainty . 
 
 This repo contains my experiment and analysis code for a psychophysics task that tests a subject's visual working memory and perceptual decision-making. Here, we compared a Bayesian-optimal model with two subptiomal models of decision-making.
 
